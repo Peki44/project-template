@@ -1,0 +1,12 @@
+{
+  "name": "b2solutions-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:frontend": "npm --prefix frontend run build",
+    "copy:spa": "node -e \"const fs=require('fs'); fs.rmSync('backend/pb_public', {recursive:true, force:true}); fs.cpSync('frontend/dist', 'backend/pb_public', {recursive:true}); console.log('Successfully copied frontend/dist to backend/pb_public');\"",
+    "build:all": "npm run build:frontend && npm run copy:spa",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "serve:backend": "powershell -Command \"cd backend; go run . serve --http=0.0.0.0:8090\""
+  }
+}

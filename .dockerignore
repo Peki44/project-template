@@ -1,0 +1,9 @@
+**/.git
+**/.gitignore
+**/node_modules
+**/dist
+**/.next
+**/pb_data
+backend/pb_public
+backend/pocketbase
+*.log
